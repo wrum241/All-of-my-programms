@@ -1,18 +1,7 @@
 import time
 import random
 
-# a = 1
-# b = 1
-#
-# n = int(input("Введите порядковый номер числа Фибоначчи:"))
-# i = 0
-# while i < n - 2:
-#     sum = a + b
-#     a = b
-#     b = sum
-#     i = i + 1
-#
-# print("Значение", n, "элемента равно", b)
+
 
 
 
