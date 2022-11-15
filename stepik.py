@@ -1,10 +1,3 @@
-import time
-import random
-
-
-
-
-
 #
 # i = [1, 31, 13, 24, 27, 43, 64, 65, 32, 3, 6, 8, 4, 7, 12]
 # print(i, '- несортированный массив')
@@ -46,33 +39,39 @@ import random
 #             mid = (last - mid)//2
 #     print(mid + 1)
 
+
 # алгоритмы поиска, доделать print, доебать что так и надо было, joinы sql ответить по факту, операторы и коммиты
-
-
-# DICT, GET, SORT.  АБСТРАКТНЫЕ классы, наследование.
-# алгоритмы поиска, алгоритмы сортировки!!!!111 запрогать в классах (сортировка(пузырьковая, перебор, вставками, гномия, бинарная) и в случае поиска(банрный, перебором, последовательный) (поставить таймер)
-# коммиты, операторы добавления для sql
-
 
 # АЛГОРИТМЫ ПОИСКА(i - массив, z - ввод переменной пользователем):
 
 
 
 class Chelovek:
-    def walking(self):
-        print('я иду')
-    print('я умею дышать')
-    print('я умею дрочить')
+    def can_walk(self):
+        print('я умею ходить')
+    def can_breathe(self):
+        print('я умею дышать')
+    def can_eat(self):
+        print('я умею кушать')
     pass
 
 class Architec(Chelovek):
-    def walking(self):
-        print('я умею ползать')
-    print('я умею строить')
+    def can_build(self):
+        print('я умею строить')
     pass
 
-class Logoped(Chelovek):
-    print('я умею лечить')
+class Architect_3cat:
+    def help_architect(self):
+        print('я помогаю главному архитектору')
+    def pappers_bringer(self):
+        print('я подношу бумажки главному архитектору')
+
+class Doctor:
+    def can_heal(self):
+        print('я умею лечить')
+class Okoolist(Chelovek):
+    def can_heal_eyes(self):
+        print('я умею лечить глаза')
     pass
 
 
@@ -114,17 +113,6 @@ class Search:
         for n in range(len(i)):
             if z == i[n]:
                 print(n + 1, '- индекс искомого числа')
-
-
-# start_time = time.time()        # Для того чтобы заработал таймер, напишите свой код ниже
-#
-# i = [1, 23, 432, 423, 53, 12, 43, 8, 76, 6, 9, 80]
-# z = int(input('Введите число из массива: '))
-# asd = Search()
-# asd.search_perebor(i, z)
-#
-# print("--- %s seconds ---" % (time.time() - start_time))        # Строчка выводит время исполнения программы
-
 
 
 # ФУНКЦИИ СОРТИРОВКИ
@@ -191,21 +179,8 @@ class Sort:
                     begin += 1
                     end -= 1
             if end - left < right - begin:
-                sort_partition(i, left, end)
+                i.sort_partition(i, left, end)
                 left = begin
             else:
-                sort_partition(i, begin, right)
+                i.sort_partition(i, begin, right)
                 right = end
-
-
-# start_time = time.time()        # Для того чтобы заработал таймер, напишите свой код ниже
-#
-# i = list(range(0, 10000))
-# random.shuffle(i)
-# print(i)
-# # i = [1, 23, 432, 423, 53, 12, 43, 8, 76, 6, 9, 24134, 80, 34, 54, 364, 23523]
-# asd = Sort()
-# print(i, '- массив до сортировки')
-# asd.sort_gnome(i)
-#
-# print("--- %s seconds ---" % (time.time() - start_time))        # Строчка выводит время исполнения программы
