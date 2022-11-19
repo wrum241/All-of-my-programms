@@ -8,3 +8,4 @@ asd = int(input('Введите число для которого хотите 
 for j, k in enumerate(i):
     if asd == k:
         print(j+1)
+
