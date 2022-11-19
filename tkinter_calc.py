@@ -58,16 +58,6 @@ class MathButton:
             self.user_history.append(f'{nums[0]} / {nums[1]} = {lab_result["text"]}')
         print(self.user_history)
 
-
-
-    # def get_user_input(self):
-    #     try:
-    #         return int(input('Введите значение '))
-    #     except:
-    #         print('Вы не ввели число, попробуйте заново')
-    #         return int(input('Введите значение '))
-
-
 root = Tk()
 root.title("Calculator")
 
