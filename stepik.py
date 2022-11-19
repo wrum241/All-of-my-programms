@@ -1,5 +1,6 @@
 # ООП инкапсуляция, наследование
 
+slomannij faile
 class Chelovek:
     def can_walk(self):
         print('я умею ходить')
