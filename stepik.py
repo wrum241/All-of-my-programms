@@ -40,7 +40,6 @@
 #     print(mid + 1)
 
 
-# алгоритмы поиска, доделать print, доебать что так и надо было, joinы sql ответить по факту, операторы и коммиты
 
 # АЛГОРИТМЫ ПОИСКА(i - массив, z - ввод переменной пользователем):
 
@@ -55,26 +54,27 @@ class Chelovek:
         print('я умею кушать')
     pass
 
-class Architec(Chelovek):
+class Architect(Chelovek):
     def can_build(self):
         print('я умею строить')
     pass
 
-class Architect_3cat:
+class Architect_3cat(Architect):
     def help_architect(self):
         print('я помогаю главному архитектору')
     def pappers_bringer(self):
         print('я подношу бумажки главному архитектору')
 
-class Doctor:
+class Doctor(Chelovek):
     def can_heal(self):
         print('я умею лечить')
-class Okoolist(Chelovek):
+class Okoolist(Doctor):
     def can_heal_eyes(self):
         print('я умею лечить глаза')
     pass
 
 
+# АЛГОРИТМЫ ПОИСКА(i - массив, z - ввод переменной пользователем):
 class Search:
     @staticmethod
     def search_binar(i, z):           # бинарный поиск индекса в массиве, где z - число из массива для которого ищется индекс
