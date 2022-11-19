@@ -43,3 +43,4 @@ class Okoolist(Doctor):
     def can_heal_eyes(self):
         print('я умею лечить глаза')
     pass
+
