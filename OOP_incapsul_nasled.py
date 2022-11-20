@@ -3,17 +3,23 @@
 class Chelovek:
     def can_walk(self):
         print('я умею ходить')
+
     def can_breathe(self):
         print('я умею дышать')
+
     def can_eat(self):
         print('я умею кушать')
+
     def has_rights(self):
         self._prava = 'имеет свои права'
+
     def can_poo(self):
         self.__x = 'может пукать'
         self.__y = 'может пукать жидко'
+
     def __init__(self):
         self.__attr = None
+
     def __method(self):
         print('я приватныйватный')
     pass
@@ -69,6 +75,27 @@ class Doctor(Chelovek):
 class Okoolist(Doctor):
     def can_heal_eyes(self):
         print('я умею лечить глаза')
-
     pass
 
+dsa = Okoolist()
+setattr(Okoolist, '_vozrast', 34)
+sdd = Okoolist()
+
+class Example:
+    def __init__(self, a: str):
+        print('ya stroka', a)
+
+    @staticmethod
+    def get_params():
+        print('Переданно 0 параметров')
+
+    @staticmethod
+    def get_params(param):
+        print('Передан 1 параметр')
+
+class OS:
+    def __getattr__(self, item):
+        print('getattr')
+
+dd = OS()
+dd.__getattr__('strochka')
