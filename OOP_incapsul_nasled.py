@@ -1,8 +1,7 @@
 # ООП инкапсуляция, наследование
-from abc import ABC, abstractmethod
+from abc import abstractmethod
 
 class Chelovek():
-
     # создать абстрактные методы в человеке, переопределить их в наследниках, создаю новый док в котором
     # обращаюсь к классам создаю экзы всех классов и вызываю абстрактные методы (метод ворк)
     @abstractmethod
@@ -40,7 +39,6 @@ class Chelovek():
     def __method(self):
         print('я приватныйватный')
     pass
-
 
 class Architect(Chelovek):
     def can_move(self):
